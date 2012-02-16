@@ -3,16 +3,16 @@
 
 Name:             R-%{packname}
 Version:          0.5_9
-Release:          2
+Release:          3
 Summary:          Interface (Wrapper) to MPI (Message-Passing Interface)
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.5-9.tar.gz
 Requires:         R-rsprng R-rlecuyer 
+Requires:         openmpi
 BuildRequires:    R-devel Rmath-devel texlive-collection-latex 
 BuildRequires:    R-rsprng R-rlecuyer 
-BuildRequires:    openmpi
 BuildRequires:    openmpi-devel
 
 %description
