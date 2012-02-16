@@ -10,7 +10,7 @@ License:          GPL (>= 2)
 URL:              None
 Source0:          http://cran.r-project.org/src/contrib/Archive/Rmpi/Rmpi_0.5-8.tar.gz
 Requires:         R-rsprng R-rlecuyer 
-BuildRequires:    Rmath-devel texlive-collection-latex 
+BuildRequires:    R-devel texlive-collection-latex 
 BuildRequires:    R-rsprng R-rlecuyer 
 BuildRequires:    openmpi-devel
 
