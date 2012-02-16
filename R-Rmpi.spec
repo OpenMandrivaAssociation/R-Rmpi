@@ -27,12 +27,9 @@ interactive R slave environment.
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{rlibdir}
-%{_bindir}/R CMD INSTALL -l %{buildroot}%{rlibdir} %{packname}
+%{_bindir}/R CMD INSTALL --no-test-load -l %{buildroot}%{rlibdir} %{packname}
 test -d %{packname}/src && (cd %{packname}/src; rm -f *.o *.so)
 rm -f %{buildroot}%{rlibdir}/R.css
-
-%check
-%{_bindir}/R CMD check %{packname}
 
 %files
 %dir %{rlibdir}/%{packname}
