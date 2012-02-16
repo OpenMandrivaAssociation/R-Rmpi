@@ -12,6 +12,7 @@ Source0:          http://cran.r-project.org/src/contrib/Archive/Rmpi/Rmpi_0.5-8.
 Requires:         R-rsprng R-rlecuyer 
 BuildRequires:    R-devel texlive-collection-latex 
 BuildRequires:    R-rsprng R-rlecuyer 
+BuildRequires:    openmpi
 BuildRequires:    openmpi-devel
 
 %description
