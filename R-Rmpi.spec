@@ -7,7 +7,7 @@ Release:          1
 Summary:          Interface (Wrapper) to MPI (Message-Passing Interface)
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
-URL:              None
+URL:              http://cran.r-project.org/web/packages/Rmpi/index.html
 Source0:          http://cran.r-project.org/src/contrib/Archive/Rmpi/Rmpi_0.5-8.tar.gz
 Requires:         R-rsprng R-rlecuyer 
 BuildRequires:    R-devel texlive-collection-latex 
