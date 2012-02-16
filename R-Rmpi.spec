@@ -11,8 +11,8 @@ URL:              None
 Source0:          http://cran.r-project.org/src/contrib/Archive/Rmpi/Rmpi_0.5-8.tar.gz
 Requires:         R-rsprng R-rlecuyer 
 BuildRequires:    Rmath-devel texlive-collection-latex 
-
-BuildRequires:   R-rsprng R-rlecuyer 
+BuildRequires:    R-rsprng R-rlecuyer 
+BuildRequires:    openmpi-devel
 
 %description
 Rmpi provides an interface (wrapper) to MPI APIs. It also provides
