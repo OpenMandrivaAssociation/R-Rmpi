@@ -2,17 +2,21 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          0.5_9
-Release:          3
+Version:          0.6_1
+Release:          1
 Summary:          Interface (Wrapper) to MPI (Message-Passing Interface)
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.5-9.tar.gz
-Requires:         R-rsprng R-rlecuyer 
+Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.6-1.tar.gz
+Requires:         R-rsprng 
+Requires:         R-rlecuyer 
 Requires:         openmpi
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex 
-BuildRequires:    R-rsprng R-rlecuyer 
+BuildRequires:    R-devel
+BuildRequires:    Rmath-devel
+BuildRequires:    texlive-collection-latex 
+BuildRequires:    R-rsprng
+BuildRequires:    R-rlecuyer 
 BuildRequires:    openmpi-devel
 
 %description
@@ -43,3 +47,23 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
 %{rlibdir}/%{packname}/s*
+
+
+%changelog
+* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_9-3
++ Revision: 775463
+- Add proper openmpi requires.
+
+* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_9-2
++ Revision: 774997
+- Use proper tarball.
+
+* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_9-1
++ Revision: 774969
+- Update to latest version
+
+* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_8-1
++ Revision: 774725
+- Import R-Rmpi
+- Import R-Rmpi
+
