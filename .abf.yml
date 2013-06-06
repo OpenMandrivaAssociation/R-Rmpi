@@ -1,2 +1,4 @@
+removed_sources:
+  Rmpi_0.6-1.tar.gz: eeec7c35a8aebdf17bac06c9680c5e171c3dd0bc
 sources:
-  "Rmpi_0.6-1.tar.gz": eeec7c35a8aebdf17bac06c9680c5e171c3dd0bc
+  Rmpi_0.6-3.tar.gz: 04e524f04d4d10cab881c6abf7aaaae886ccdea9

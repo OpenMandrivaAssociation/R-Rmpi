@@ -2,16 +2,17 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          0.6_1
+Version:          0.6.3
 Release:          1
 Summary:          Interface (Wrapper) to MPI (Message-Passing Interface)
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.6-1.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/Rmpi_0.6-3.tar.gz
 Requires:         R-rsprng 
 Requires:         R-rlecuyer 
 Requires:         openmpi
+BuildRequires:    openmpi
 BuildRequires:    R-devel
 BuildRequires:    Rmath-devel
 BuildRequires:    texlive-collection-latex 
@@ -41,6 +42,8 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/INDEX
 %{rlibdir}/%{packname}/NAMESPACE
 %{rlibdir}/%{packname}/Meta
+%{rlibdir}/%{packname}/CITATION
+%{rlibdir}/%{packname}/MacR64slaves.sh
 %{rlibdir}/%{packname}/R*
 %{rlibdir}/%{packname}/c*
 %{rlibdir}/%{packname}/demo
@@ -66,4 +69,5 @@ rm -f %{buildroot}%{rlibdir}/R.css
 + Revision: 774725
 - Import R-Rmpi
 - Import R-Rmpi
+
 
