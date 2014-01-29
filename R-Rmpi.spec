@@ -1,39 +1,28 @@
-%global packname  Rmpi
+%global packname Rmpi
 %global rlibdir  %{_libdir}/R/library
 
-Name:             R-%{packname}
-Version:          0.6.3
-Release:          2
-Summary:          Interface (Wrapper) to MPI (Message-Passing Interface)
-Group:            Sciences/Mathematics
-License:          GPL (>= 2)
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/Rmpi_0.6-3.tar.gz
-Requires:         R-rsprng 
-Requires:         R-rlecuyer 
-Requires:         openmpi
-BuildRequires:    openmpi
-BuildRequires:    R-devel
-BuildRequires:    Rmath-devel
-BuildRequires:    texlive-collection-latex 
-BuildRequires:    R-rsprng
-BuildRequires:    R-rlecuyer 
-BuildRequires:    openmpi-devel
+Name:		R-%{packname}
+Version:	0.6.3
+Release:	3
+Summary:	Interface (Wrapper) to MPI (Message-Passing Interface)
+Group:		Sciences/Mathematics
+License:	GPLv2+
+Url:		http://cran.r-project.org/web/packages/%{packname}/index.html
+Source0:	http://cran.r-project.org/src/contrib/Rmpi_0.6-3.tar.gz
+BuildRequires:	openmpi
+BuildRequires:	R-rlecuyer
+BuildRequires:	R-rsprng
+BuildRequires:	texlive-collection-latex
+BuildRequires:	pkgconfig(libR)
+BuildRequires:	pkgconfig(libRmath)
+BuildRequires:	pkgconfig(ompi)
+Requires:	openmpi
+Requires:	R-rlecuyer
+Requires:	R-rsprng
 
 %description
 Rmpi provides an interface (wrapper) to MPI APIs. It also provides
 interactive R slave environment.
-
-%prep
-%setup -q -c -n %{packname}
-
-%build
-
-%install
-mkdir -p %{buildroot}%{rlibdir}
-%{_bindir}/R CMD INSTALL --no-test-load -l %{buildroot}%{rlibdir} %{packname}
-test -d %{packname}/src && (cd %{packname}/src; rm -f *.o *.so)
-rm -f %{buildroot}%{rlibdir}/R.css
 
 %files
 %dir %{rlibdir}/%{packname}
@@ -51,23 +40,16 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/libs
 %{rlibdir}/%{packname}/s*
 
+#----------------------------------------------------------------------------
 
-%changelog
-* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_9-3
-+ Revision: 775463
-- Add proper openmpi requires.
+%prep
+%setup -q -c -n %{packname}
 
-* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_9-2
-+ Revision: 774997
-- Use proper tarball.
+%build
 
-* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_9-1
-+ Revision: 774969
-- Update to latest version
-
-* Thu Feb 16 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5_8-1
-+ Revision: 774725
-- Import R-Rmpi
-- Import R-Rmpi
-
+%install
+mkdir -p %{buildroot}%{rlibdir}
+%{_bindir}/R CMD INSTALL --no-test-load -l %{buildroot}%{rlibdir} %{packname}
+test -d %{packname}/src && (cd %{packname}/src; rm -f *.o *.so)
+rm -f %{buildroot}%{rlibdir}/R.css
 
