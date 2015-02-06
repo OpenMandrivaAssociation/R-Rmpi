@@ -3,7 +3,7 @@
 
 Name:		R-%{packname}
 Version:	0.6.3
-Release:	3
+Release:	4
 Summary:	Interface (Wrapper) to MPI (Message-Passing Interface)
 Group:		Sciences/Mathematics
 License:	GPLv2+
