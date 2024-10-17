@@ -7,7 +7,7 @@ Release:	4
 Summary:	Interface (Wrapper) to MPI (Message-Passing Interface)
 Group:		Sciences/Mathematics
 License:	GPLv2+
-Url:		http://cran.r-project.org/web/packages/%{packname}/index.html
+Url:		https://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:	http://cran.r-project.org/src/contrib/Rmpi_0.6-3.tar.gz
 BuildRequires:	openmpi
 BuildRequires:	R-rlecuyer
